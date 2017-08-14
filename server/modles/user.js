@@ -1,19 +1,8 @@
 var mongoose = require('mongoose');
 
 
-var user = mongoose.model('user', {
+var User = mongoose.model('User', {
 
-    firstName: {
-        require: true,
-        minlength: 1,
-        type: String
-    },
-    lastName: {
-        require: true,
-        minlength: 1,
-        type: String
-    }
-    ,
     email: {
         require: true,
         trim: true,
@@ -23,5 +12,5 @@ var user = mongoose.model('user', {
 });
 
 
-module.exports = {user};
+module.exports = {User}
 
